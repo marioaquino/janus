@@ -21,7 +21,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color molokai
+color soso
 
 " ConqueTerm wrapper
 function StartTerm()
