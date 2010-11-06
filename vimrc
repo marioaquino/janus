@@ -17,6 +17,16 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
@@ -45,6 +55,12 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
+" Prefs for Gist plugin
+" Mac-specific: post gist url to clip board
+let g:gist_clip_command = 'pbcopy'
+" Detect filetype if vim fails auto-detection
+let g:gist_detect_filetype = 1
 
 function s:setupWrapping()
   set wrap

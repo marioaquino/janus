@@ -124,6 +124,7 @@ vim_plugin_task "color-sampler",    "http://www.vim.org/scripts/download_script.
 vim_plugin_task "conque",           "http://conque.googlecode.com/files/conque_1.1.tar.gz"
 vim_plugin_task "fugitive",         "http://github.com/tpope/vim-fugitive.git"
 vim_plugin_task "git",              "http://github.com/tpope/vim-git.git"
+vim_plugin_task "gist",             "https://github.com/mattn/gist-vim.git"
 vim_plugin_task "haml",             "http://github.com/tpope/vim-haml.git"
 vim_plugin_task "indent_object",    "http://github.com/michaeljsmith/vim-indent-object.git"
 vim_plugin_task "javascript",       "http://github.com/pangloss/vim-javascript.git"
@@ -143,6 +144,8 @@ vim_plugin_task "snipmate",         "http://github.com/msanders/snipmate.vim.git
 vim_plugin_task "autoclose",        "http://github.com/Townk/vim-autoclose.git"
 vim_plugin_task "markdown",         "http://github.com/tpope/vim-markdown.git"
 vim_plugin_task "jslint",           "http://github.com/hallettj/jslint.vim.git"
+vim_plugin_task "unimpaired",       "http://github.com/tpope/vim-unimpaired.git"
+
 
 vim_plugin_task "command_t",        "http://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
