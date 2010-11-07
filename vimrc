@@ -17,16 +17,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Press F4 to toggle highlighting on/off, and show current value.
-:noremap <F4> :set hlsearch! hlsearch?<CR>
-
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
@@ -108,7 +98,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color soso
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
