@@ -145,6 +145,7 @@ vim_plugin_task "autoclose",        "http://github.com/Townk/vim-autoclose.git"
 vim_plugin_task "markdown",         "http://github.com/tpope/vim-markdown.git"
 vim_plugin_task "jslint",           "http://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "unimpaired",       "http://github.com/tpope/vim-unimpaired.git"
+vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
 
 
 vim_plugin_task "command_t",        "http://github.com/wincent/Command-T.git" do

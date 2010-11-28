@@ -21,7 +21,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color soso
+color vividchalk
 
 " ConqueTerm wrapper
 function StartTerm()
