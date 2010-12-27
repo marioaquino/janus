@@ -145,11 +145,6 @@ vim_plugin_task "markdown",         "git://github.com/tpope/vim-markdown.git"
 vim_plugin_task "align",            "git://github.com/tsaleh/vim-align.git"
 vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
 vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim.git"
-vim_plugin_task "gist",             "git://github.com/mattn/gist-vim.git"
-vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
-vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
-vim_plugin_task "bufonly",          "git://github.com/duff/vim-bufonly.git"
-vim_plugin_task "ragtag",           "git://github.com/tpope/vim-ragtag.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -198,6 +193,12 @@ end
 vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
 end
+
+vim_plugin_task "gist",             "git://github.com/mattn/gist-vim.git"
+vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
+vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
+vim_plugin_task "bufonly",          "git://github.com/duff/vim-bufonly.git"
+vim_plugin_task "ragtag",           "git://github.com/tpope/vim-ragtag.git"
 
 desc "Update the documentation"
 task :update_docs do
