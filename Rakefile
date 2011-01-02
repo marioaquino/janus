@@ -200,6 +200,7 @@ vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
 vim_plugin_task "bufonly",          "git://github.com/duff/vim-bufonly.git"
 vim_plugin_task "ragtag",           "git://github.com/tpope/vim-ragtag.git"
+vim_plugin_task "specky",           "git://github.com/vim-scripts/Specky.git"
 
 desc "Update the documentation"
 task :update_docs do
