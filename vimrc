@@ -115,6 +115,5 @@ endif
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
+" xterm not recognized right by vim
+set term=builtin_ansi
