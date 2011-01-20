@@ -4,6 +4,9 @@ set number
 set ruler
 syntax on
 
+" Set encoding
+set encoding=utf-8
+
 " Whitespace stuff
 set nowrap
 set tabstop=2
@@ -106,14 +109,11 @@ set modelines=10
 " Default color scheme
 color vividchalk
 
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
-
 "Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" xterm not recognized right by vim
-set term=builtin_ansi
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
