@@ -130,7 +130,7 @@ vim_plugin_task "javascript",       "git://github.com/pangloss/vim-javascript.gi
 vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "markdown_preview", "git://github.com/robgleeson/vim-markdown-preview.git"
 vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
-vim_plugin_task "nerdcommenter",    "git://github.com/scrooloose/nerdcommenter.git"
+vim_plugin_task "nerdcommenter",    "git://github.com/ddollar/nerdcommenter.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
 vim_plugin_task "taglist",          "http://vim.sourceforge.net/scripts/download_script.php?src_id=7701"
 vim_plugin_task "vividchalk",       "git://github.com/tpope/vim-vividchalk.git"
@@ -191,9 +191,11 @@ end
 vim_plugin_task "molokai" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=9750 > colors/molokai.vim"
 end
-
 vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
+end
+vim_plugin_task "vwilight" do
+  sh "curl http://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
 
 vim_plugin_task "gist",             "git://github.com/mattn/gist-vim.git"
