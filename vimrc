@@ -110,6 +110,9 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+
 " Use modeline overrides
 set modeline
 set modelines=10
@@ -117,9 +120,12 @@ set modelines=10
 " Default color scheme
 color vividchalk
 
-"Directories for swp files
+" Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+" MacVIM shift+arrow-keys behavior (required in .vimrc)
+let macvim_hig_shift_movement = 1
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
