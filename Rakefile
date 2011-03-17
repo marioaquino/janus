@@ -222,6 +222,7 @@ vim_plugin_task "matchit",          "http://www.vim.org/scripts/download_script.
 vim_plugin_task "textobj-user",     "git://github.com/kana/vim-textobj-user.git"
 vim_plugin_task "textobj-rubyblock","git://github.com/nelstrom/vim-textobj-rubyblock.git"
 vim_plugin_task "ruby-refactoring", "git://github.com/ecomba/vim-ruby-refactoring.git"
+vim_plugin_task "zen-coding",       "git://github.com/mattn/zencoding-vim.git"
 
 desc "Update the documentation"
 task :update_docs do
