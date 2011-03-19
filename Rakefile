@@ -214,7 +214,13 @@ vim_plugin_task "vwilight" do
   sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
 
-if File.exists?(janus = File.expand_path("~/.janus.rake"))
+def custom_janus_plugins
+  janus_path = File.expand_path('~/.janus.rake')
+  return File.readlink(janus_path) if File.symlink?(janus_path)
+  return janus_path if File.exists?(janus_path)
+end
+
+if (janus = custom_janus_plugins)
   puts "Loading your custom rake file"
   import(janus)
 end
