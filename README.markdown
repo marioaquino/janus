@@ -18,6 +18,12 @@ that we have given careful thought to the experience of using MacVIM
 with the tools in question. If you run into an issue using it, please
 report an issue to the issue tracker.
 
+## Mailing list
+
+The mailing list is hosted at [Google
+Groups](http://groups.google.com/group/janus-vimius), please join it for
+discussion and announcements.
+
 ## Pre-requisites
 
 Janus is built primarily for [MacVim](http://code.google.com/p/macvim/) on OSX.
@@ -30,7 +36,7 @@ Linux users can install `gvim` for an experience identical to MacVim.
 On Debian/Ubuntu, simply `apt-get install vim-gnome`. For remote
 servers, install console vim with `apt-get install vim-nox`.
 
-On a fresh Ubuntu install you also have to install the packages `rake` and `ruby-dev`
+On a fresh Ubuntu install you also have to install the packages `rake`, `ruby-dev`, `curl` and `make`
 before running the install script and `exuberant-ctags` for ctags
 support.
 
@@ -46,6 +52,23 @@ or
 
   `curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh`
 
+Note that MacVim and Janus must be compiled using the same version of
+Ruby.  This may cause problems for users of RVM or rbenv.  To solve,
+execute:
+
+    rvm system
+    brew uninstall macvim
+    brew install macvim
+    curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh
+    rvm default
+
+or
+
+If you use [Babushka](http://babushka.me) you can using the following script to install Janus
+along with MacVim (will also setup mvim on your path)
+
+  `babushka joshholt:janus`
+
 ## Customization
 
 Create `~/.vimrc.local` and `~/.gvimrc.local` for any local
@@ -56,11 +79,21 @@ For example, to override the default color schemes:
     echo color desert  > ~/.vimrc.local
     echo color molokai > ~/.gvimrc.local
 
+Create `~/.vimrc.pre` for any customizations that need to be run before
+the loading of ~/.vimrc, e.g. changing of `<Leader>`.
+
 If you want to add additional Vim plugins you can do so by adding a
 `~/.janus.rake` like so:
 
     vim_plugin_task "zencoding", "git://github.com/mattn/zencoding-vim.git"
     vim_plugin_task "minibufexpl", "git://github.com/fholgado/minibufexpl.vim.git"
+
+Plugins hosted at [vim.org](http://www.vim.org/scripts) use a unique URL for each
+version.  If you want `~/.janus.rake` to point to a plugin hosted there, use the GitHub
+mirror at [https://github.com/vim-scripts](https://github.com/vim-scripts)
+to automatically point to the latest version:
+
+    vim_plugin_task "bufexplorer", "git://github.com/vim-scripts/bufexplorer.zip.git"
 
 If you do not wish to use one of the plugins Janus provides out of the
 box you can have it skipped using the `skip_vim_plugin` method in
@@ -104,7 +137,9 @@ Here's some tips if you've never used VIM before:
 
 * Use `:q` to exit vim
 * Certain commands are prefixed with a `<Leader>` key, which maps to `\`
-  by default. Use `let mapleader = ","` to change this.
+  by default. Use `let mapleader = ","` to change this. If you want this
+  to be in effect for uses of <Leader> in your .vimrc, make sure to define
+  this in the `~/.vimrc.pre`
 * Keyboard [cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
 
 # Features
@@ -127,9 +162,10 @@ Janus ships with a number of basic customizations for vim:
   characters) in insert mode
 * `<Leader>e` expands to `:e {directory of current file}/` (open in the
   current buffer)
-* `<Leader>tr` expands to `:te {directory of current file}/` (open in a
+* `<Leader>te` expands to `:te {directory of current file}/` (open in a
   new MacVIM tab)
 * `<C-P>` inserts the directory of the current file into a command
+* Automatically resize splits when resizing the MacVim window
 
 ## "Project Drawer" aka [NERDTree](http://github.com/wycats/nerdtree)
 

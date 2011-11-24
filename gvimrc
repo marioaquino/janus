@@ -1,3 +1,8 @@
+" Include user's local pre .gvimrc config
+if filereadable(expand("~/.gvimrc.pre"))
+  source ~/.gvimrc.pre
+endif
+
 if has("gui_macvim")
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
@@ -226,6 +231,7 @@ if exists("loaded_nerd_tree")
   call s:DefineCommand("rm", "Remove")
   call s:DefineCommand("e", "Edit")
   call s:DefineCommand("mkdir", "Mkdir")
+  cabbrev Edit! e!
 endif
 
 " Include user's local vim config

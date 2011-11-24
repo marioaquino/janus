@@ -1,3 +1,8 @@
+" Include user's local pre .vimrc config
+if filereadable(expand("~/.vimrc.pre"))
+  source ~/.vimrc.pre
+endif
+
 set nocompatible
 
 set number
@@ -50,6 +55,10 @@ map <Leader><Leader> :ZoomWin<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
+" Gundo configuration
+nmap <F5> :GundoToggle<CR>
+imap <F5> <ESC>:GundoToggle<CR>
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -73,9 +82,6 @@ function s:setupMarkup()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
-" make uses real tabs
-au FileType make set noexpandtab
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
@@ -86,9 +92,6 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
-
-" make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -151,6 +154,11 @@ runtime! macros/matchit.vim
 
 " Show (partial) command in the status line
 set showcmd
+
+if has("gui_running")
+  " Automatically resize splits when resizing MacVim window
+  autocmd VimResized * wincmd =
+endif
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
