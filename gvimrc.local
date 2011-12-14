@@ -1,0 +1,5 @@
+" Cancel the current search hightlight
+nnoremap <esc> :noh<return><esc>
+
+set guifont=Mensch:h12
+
