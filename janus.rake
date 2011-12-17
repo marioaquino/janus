@@ -9,4 +9,5 @@ vim_plugin_task "ruby-refactoring", "git://github.com/ecomba/vim-ruby-refactorin
 vim_plugin_task "zen-coding",       "git://github.com/mattn/zencoding-vim.git"
 vim_plugin_task "bundler",          "git://github.com/tpope/vim-bundler.git"
 vim_plugin_task "vim-blockle",      "git://github.com/jgdavey/vim-blockle.git"
+vim_plugin_task "delimitMate",      "git://github.com/Raimondi/delimitMate.git"
 
