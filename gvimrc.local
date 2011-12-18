@@ -5,24 +5,4 @@ if has("gui_macvim")
   set guifont=Mensch:h12
 endif
 
-if has("gui_gtk2")
-  " Control-F for Ack
-  map <C-F> :Ack<space>
-
-  " Control-e for ConqueTerm
-  map <C-e> :call StartTerm()<CR>
-
-  " Alt-/ to toggle comments
-  map <A-/> <plug>NERDCommenterToggle<CR>
-  imap <A-/> <Esc><plug>NERDCommenterToggle<CR>i
-
-  " Control-][ to increase/decrease indentation
-  vmap <C-]> >gv
-  vmap <C-[> <gv
-
-  " Adjust viewports to the same size
-  map <Leader>= <C-w>=
-  imap <Leader>= <Esc> <C-w>=
-endif
-
 
