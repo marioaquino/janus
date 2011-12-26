@@ -23,7 +23,7 @@
 ## Cucumber
     C-] - Jump to step from feature
 
-## String toggleing (Specky plugin)
+## String toggling (Specky plugin)
     C-s' - Toggles between single quote, double quote (and symbol in Ruby)
 
 ## Ruby
