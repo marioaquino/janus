@@ -56,3 +56,6 @@ au FocusLost *  :silent wa
 
 " Mapping for toggling between block wrappers
 let g:blockle_mapping = '<Leader>bl'
+
+" Toggle open the tags list window
+nnoremap <silent> <F8> :TlistToggle<CR>
