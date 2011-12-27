@@ -7,12 +7,11 @@
     <Leader>-nf - Find current buffer in the tree
     m - Display tree modification options (add, move, delete, copy) [Displayed when cursor is in tree]
 
-## Window Navigation
+## Window Operations
     C-w-direction -  Move to the window in the desired direction (up, down, left, right)
-
-## Window splitting
     :sp - Split the current buffer horizontally
     :vs - Split the current buffer vertically
+    <Leader><Leader> - Hide all open windows other than where the cursor appears
 
 ## Buffer exploration
     <Leader>be - List currently open buffers
@@ -22,6 +21,7 @@
 
 ## Cucumber
     C-] - Jump to step from feature
+    C-W] - Split the window horizontally with the corresponding step in the new window
 
 ## String toggling (Specky plugin)
     C-s' - Toggles between single quote, double quote (and symbol in Ruby)
@@ -29,8 +29,22 @@
 ## Ruby
     <Leader>bl - Toggle a block boundary between {} and do/end
 
-## RSpec (Specky plugin)
+## Rails
+    gf - Moves to file under cursor (if it can be figured out)
     :A - Change view to alternate file (moves to related spec for a given file, or to file from related spec)
+    :AS - Open alternate file in a horizontal split window
+    :AV - Open alternate file in a vertical split window
+    :R - Change to related file (examples below)
+      Current file            Alternate file      Related file ~
+      model                   unit test           schema definition
+      controller (in method)  functional test     template (view)
+      template (view)         functional test     controller (jump to method)
+      migration               previous migration  next migration
+      config/database.yml     config/routes.rb    config/environments/*.rb
+    :RS - Open related file in a horizontal split window
+    :RV - Open related file in a vertical split window
+
+## RSpec
     C-ss - Run current RSpec buffer and display result
       q - Close window from RSpec test result
 
