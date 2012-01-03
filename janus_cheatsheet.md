@@ -8,7 +8,8 @@
     m - Display tree modification options (add, move, delete, copy) [Displayed when cursor is in tree]
 
 ## Window Operations
-    <C-w>-direction -  Move to the window in the desired direction (up, down, left, right)
+    <C-w>-direction - Move to the window in the desired direction (up, down, left, right)
+    <C-w>= - Adjust viewports to the same size
     :sp - Split the current buffer horizontally
     :vs - Split the current buffer vertically
     <Leader><Leader> - Hide all open windows other than where the cursor appears
