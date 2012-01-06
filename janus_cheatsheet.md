@@ -5,7 +5,7 @@
 ## Ack (project find)
     <C-F> - (Control+Shift+F) Find in project
       q - Quit the search view
-      <Enter> - Load a search result into the active buffer
+      <CR> - Load a search result into the active buffer
 
 ## Tree Operations
     <Leader>-n - Toggle tree pane
