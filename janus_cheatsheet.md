@@ -111,3 +111,11 @@ View example refactoring usages [here](http://justinram.wordpress.com/2010/12/30
 
 ## CTags
     <F8> - Toggle open/close tag list window for the current buffer
+
+## Finding a file (Command-T)
+    <Leader>-T  Prompt to search for a file
+    <CR>        open the selected file
+    <C-CR>      open the selected file in a new split window
+    <C-s>       open the selected file in a new split window
+    <C-v>       open the selected file in a new vertical split window
+    <C-t>       open the selected file in a new tab
