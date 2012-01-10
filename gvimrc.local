@@ -5,4 +5,5 @@ if has("gui_macvim")
   set guifont=Mensch:h12
 endif
 
-
+" Remove keystroke for launching conqueterm
+unmap <C-e>
