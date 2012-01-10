@@ -18,6 +18,8 @@
     :sp - Split the current buffer horizontally
     :vs - Split the current buffer vertically
     <Leader><Leader> - Hide all open windows other than where the cursor appears
+    <C-e> - Move the screen up one line without moving the cursor
+    <C-y> - Move the screen down one line without moving the cursor
 
 ## Buffer exploration
     <Leader>be - List currently open buffers
