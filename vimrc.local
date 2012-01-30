@@ -56,3 +56,11 @@ let g:blockle_mapping = '<Leader>bl'
 
 " Toggle open the tags list window
 nnoremap <silent> <F8> :TlistToggle<CR>
+
+" Map .. to move up the tree when browsing into Git trees
+autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
+
+" delete the fugitive buffer when you leave it
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+
