@@ -103,6 +103,11 @@ View example refactoring usages [here](http://justinram.wordpress.com/2010/12/30
       <CR>  reblame at commit
       ~     reblame at [count]th first grandparent
       P     reblame at [count]th parent (like HEAD^[count])
+    :Glog - Show the git log for the current buffer
+      [q    (:cprev) jump to previous quickfix item
+      ]q	(:cnext) jump to next quickfix item
+      [Q	(:cfirst) jump to first quickfix item
+      ]Q	(:clast) jump to last quickfix item
 
 ## Bundler
     :Bopen[!] [gem]    - With no argument, edits the Gemfile.  Otherwise, effectively does a `bundle open` of a
