@@ -42,11 +42,15 @@ support.
 
 ## Installation
 
-0. `for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old;
+0. `cd $HOME`
+1. `for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old;
    done`
-1. `git clone git://github.com/carlhuda/janus.git ~/.vim`
-2. `cd ~/.vim`
-3. `rake`
+2. `git clone git://github.com/marioaquino/janus.git ~/.vim`
+3. `for i in vimrc.local gvimrc.local janus.rake; do ln -s $HOME/.vim/$i .$i; done`
+4. `cd ~/.vim`
+5. `rake`
+6. `rake update_docs`
+
 
 or
 
